@@ -70,7 +70,7 @@ bin/main.rb
 ### Dependencies
 
 Ruby 2.5.5
-Nokogiri
+Nokogiri 1.10.9
 
 ### Contributing
 
