@@ -1,9 +1,10 @@
 # Web Scraper
-> Scan for Full Stack open positions
+> It scan for Full Stack open positions
 
-![screenshot](./images/screenshot.png)
+![screenshot](.screenshot.png)
 
-<br>Done with Nokogiri
+<br>The main purpose is to deploy a working app<br>
+Having to learn a new framework in a short amount of time (Less than 3 days).
 
 ## Content
 
@@ -16,34 +17,24 @@
 * [Author](#author)
 * [License](#license)
 
-## Game rules.
-* Two players play
-* Each play draw X or O alternately on board
-* The game ends when someone get 3 marks in a row
-* The row can be vertical, horizontal or diagonal 
-
 ## Requirements
 
 <ul>
   <h3>Features</h3>
-  <li>Get a valid user input</li>
-  <li>Display board after each move</li>
-  <li>End game if someone win</li>
-  <li>End game if board become full</li>
+  <li>Should use Nokogiri framework</li>
+  <li>Should use OOP with inherit and encapsulation</li>
+  <li>Make a test suit, containing Unit Tests</li>
+  <li>Follow the good practices</li>
+  <li>Make it friendly to modify</li>
 </ul>
 
-### Built With
+## Built With
 
 - Ruby Language <br>
 - Nokogiri gem
 - Rubocop (Linter) with Stickler (CI Tool)<br>
 - RSpec (Unit testing) <br>
 - Git (with Gitflow), Github and VScode <br>
-
-## Live Demo
-
-To play online, go to the page and hit (Run) button.
-[Run on Repl.it](https://repl.it/@ThiagoMiranda2/tictactoeruby)
 
 ## Quick Start
 
@@ -69,7 +60,7 @@ bin/main.rb
 
 ### Dependencies
 
-Ruby 2.5.5
+Ruby 2.5.5<br>
 Nokogiri 1.10.9
 
 ### Contributing
