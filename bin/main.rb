@@ -3,20 +3,35 @@
 require 'nokogiri'
 require 'open-uri'
 
-# Fetch and parse HTML document
-doc = Nokogiri::HTML(open('https://www.indeed.com/jobs?q=full+stack&l='))
+file = File.read('C:\dev\Rails\scraper\example\20 Best full stack developer jobs (Hiring Now!) _ SimplyHired.html')
+page = Nokogiri::HTML(file).css('body')
 
-# get raw data
-puts 'Search results for Full Stack'
-doc.css('div#searchCountPages').each do |link|
-  p link.content
+# --- GET RAW DATA ---
+titles = []
+page.css('.card-link').each do |card|
+  titles << card.content
 end
 
-puts 'Income offer'
-doc.css('.salaryText').each do |link|
-  p link.content
+# next two by two
+location = []
+page.css('.jobposting-location').each do |card|
+  location << card.content
 end
 
-# clean data
+salary = []
+page.css('.jobposting-salary').each do |card|
+  salary << card.content
+end
 
-# display data
+content = []
+page.css('.jobposting-snippet').each do |card|
+  content << card.content
+end
+
+# --- CLEAN DATA ---
+
+# --- DISPLAY DATA ---
+titles.each { |line| p line }
+location.each { |line| p line }
+salary.each { |line| p line }
+content.each { |line| p line }
