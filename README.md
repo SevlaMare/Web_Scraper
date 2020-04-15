@@ -20,7 +20,6 @@ Having to learn a new framework in a short amount of time (Less than 3 days).
 ## Requirements
 
 <ul>
-  <h3>Features</h3>
   <li>Should use Nokogiri framework</li>
   <li>Should use OOP with inherit and encapsulation</li>
   <li>Make a test suit, containing Unit Tests</li>
