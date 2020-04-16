@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 require 'nokogiri'
 require 'open-uri'
 require_relative '../lib/metadata.rb'
