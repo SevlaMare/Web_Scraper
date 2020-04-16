@@ -8,36 +8,20 @@ class Engine < Metadata
   end
 
   # --- GET RAW DATA ---
-  def get_titles(site)
-    site.css('.card-link').each do |card|
-      @title << card.content
-    end
-    @title
-  end
+  def get_it(site, argx)
+    key = @title if argx == 'title'
+    key = @location if argx == 'location'
+    key = @salary if argx == 'salary'
+    key = @content if argx == 'content'
 
-  def get_locations(site)
-    site.css('.jobposting-location').each do |card|
-      @location << card.content
+    site.css(@map_class[argx]).each do |card|
+      key << card.content
     end
-    @location
-  end
-
-  def get_salaries(site)
-    site.css('.jobposting-salary').each do |card|
-      @salary << card.content
-    end
-    @salary
-  end
-
-  def get_content(site)
-    site.css('.jobposting-snippet').each do |card|
-      @content << card.content
-    end
-    @content
+    key
   end
 
   # --- CLEAN DATA ---
-  def clean_data
+  def remove_duplicates
     temp = []
     (0...@location.length).step(2).each do |index|
       temp << @location[index]
@@ -51,6 +35,17 @@ class Engine < Metadata
     argx = @location if argx == 'location'
     argx = @salary if argx == 'salary'
     argx = @content if argx == 'content'
+
     argx.each { |line| p line }
+  end
+
+  # --- EXPORT ---
+  def export
+    CSV.open('page.csv', 'wb', encoding: 'UTF-8', col_sep: ';') do |file|
+      file << @title
+      file << @location
+      file << @salary
+      file << @content
+    end
   end
 end
