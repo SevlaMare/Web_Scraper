@@ -1,12 +1,14 @@
+#!/usr/bin/env ruby
+
 require 'nokogiri'
 require 'open-uri'
 require 'csv'
 require_relative '../lib/metadata.rb'
 require_relative '../lib/engine.rb'
 
-def show_all(page = 1, export = true)
+def show_all(page = 1, export = true, search = 'full stack')
   scrap = Engine.new
-  page = scrap.scan_now(page)
+  page = scrap.scan_now(page, search)
 
   # --- STORE DATA ---
   scrap.get_it(page, 'title')
@@ -28,4 +30,4 @@ def show_all(page = 1, export = true)
 end
 
 # page_number, export_to_csv
-show_all(3, false)
+show_all(3, false, 'ruby rails')

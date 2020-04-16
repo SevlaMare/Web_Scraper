@@ -1,10 +1,12 @@
 class Engine < Metadata
-  def scan_now(_page = 1)
-    # link = "https://www.simplyhired.com/search?q=full+stack+developer&pn=#{page}"
-    # Nokogiri::HTML(open(link))
+  def scan_now(page = 1, term = nil)
+    term = term.strip.gsub!(' ', '+')
 
-    file = File.read('C:\dev\Rails\example\20 Best full stack developer jobs (Hiring Now!) _ SimplyHired.html')
-    Nokogiri::HTML(file).css('body')
+    link = "https://www.simplyhired.com/search?q=#{term}&pn=#{page}"
+    Nokogiri::HTML(open(link))
+
+    # file = File.read('C:\dev\Rails\example\20 Best full stack developer jobs (Hiring Now!) _ SimplyHired.html')
+    # Nokogiri::HTML(file).css('body')
   end
 
   # --- GET RAW DATA ---
