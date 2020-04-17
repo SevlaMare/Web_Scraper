@@ -1,10 +1,11 @@
 # Web Scraper
-> It scan for Full Stack open positions
+> Scan for open positions of any kind and export data into a table.
+Easy to modify for use in any other web page.
 
 ![screenshot](.screenshot.png)
 
 <br>The main purpose is to deploy a working app<br>
-Having to learn a new framework in a short amount of time (Less than 3 days).
+Having to learn a new librarie in a short amount of time (Less than 3 days).
 
 ## Content
 
@@ -20,47 +21,41 @@ Having to learn a new framework in a short amount of time (Less than 3 days).
 ## Requirements
 
 <ul>
-  <li>Should use Nokogiri framework</li>
-  <li>Should use OOP with inherit and encapsulation</li>
-  <li>Make a test suit, containing Unit Tests</li>
+  <li>Should use Nokogiri</li>
+  <li>Should use OOP with inherit</li>
+  <li>Make unit tests</li>
   <li>Follow the good practices</li>
-  <li>Make it friendly to modify</li>
+  <li>Make it friendly to modify and use</li>
 </ul>
 
 ## Built With
 
 - Ruby Language <br>
-- Nokogiri gem
-- Rubocop (Linter) with Stickler (CI Tool)<br>
+- Gems: Nokogiri, CSV and open-uri <br>
+- Rubocop (Linter) with Stickler (CI Tool) <br>
 - RSpec (Unit testing) <br>
-- Git (with Gitflow), Github and VScode <br>
+- Git, Github and VScode <br>
 
 ## Quick Start
 
 #### Get a local copy with:<br>
 ```js
-git clone git@github.com:SevlaMare/TicTacToe_Ruby.git
+git clone git@github.com:SevlaMare/Web_Scraper.git
 ```
 Or just hit (Download Zip) on green button (Clone or Download) on top of this page.
 
 #### Run on terminal/prompt:
 
-If you are on windows:
-* Go inside the project folder
-* Right shift '+' right mouse click (Float menu)
-* Open prompt here (Option)
 ```js
 ruby bin/main.rb
 ```
-For linux:
-```js
-bin/main.rb
-```
+When run, by default, it will generate a CSV file with data 
+from one page, scrapped for 'Full Stack' open positions.
 
 ### Dependencies
 
 Ruby 2.5.5<br>
-Nokogiri 1.10.9
+Nokogiri 1.10.9<br>
 
 ### Contributing
 
