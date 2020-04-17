@@ -43,7 +43,7 @@ class Engine < Metadata
 
   # --- EXPORT ---
   def export
-    CSV.open('page.csv', 'wb', encoding: 'UTF-8', col_sep: ';') do |file|
+    CSV.open('data.csv', 'wb', encoding: 'UTF-8', col_sep: ';') do |file|
       file << @title
       file << @location
       file << @salary

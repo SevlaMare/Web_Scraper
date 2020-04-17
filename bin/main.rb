@@ -28,4 +28,4 @@ def show_all(page = 1, export = true, search = 'full stack')
 end
 
 # page_number, export_to_csv
-show_all(3, false, 'ruby rails')
+show_all(3, true, 'ruby rails')
