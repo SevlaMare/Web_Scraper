@@ -1,8 +1,8 @@
 # Web Scraper
-> Scan for open positions of any kind and export data into a table.
+> Scan for open positions of any kind and export data into a table.<br>
 Easy to modify for use in any other web page.
 
-![screenshot](.screenshot.png)
+![screenshot](screenshot.png)
 
 <br>The main purpose is to deploy a working app<br>
 Having to learn a new librarie in a short amount of time (Less than 3 days).
