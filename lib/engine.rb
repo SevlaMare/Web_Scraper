@@ -4,9 +4,6 @@ class Engine < Metadata
 
     link = "https://www.simplyhired.com/search?q=#{term}&pn=#{page}"
     Nokogiri::HTML(URI(link).open)
-
-    # file = File.read('C:\dev\Rails\example\20 Best full stack developer jobs (Hiring Now!) _ SimplyHired.html')
-    # Nokogiri::HTML(file).css('body')
   end
 
   # --- GET RAW DATA ---
