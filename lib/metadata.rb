@@ -2,6 +2,7 @@ class Metadata
   # Cop dissable because in classes,
   # we only can init empty array with .new
   # rubocop:disable Style/EmptyLiteral
+  attr_reader :map_class
   def initialize
     @title = Array.new
     @location = Array.new
