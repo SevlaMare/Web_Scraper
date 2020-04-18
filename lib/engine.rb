@@ -5,7 +5,7 @@ class Engine < Metadata
     link = "https://www.simplyhired.com/search?q=#{term}&pn=#{page}"
     Nokogiri::HTML(URI(link).open)
   end
-  
+
   # --- GET RAW DATA ---
   def get_it(site, argx)
     key = @title if argx == 'title'
@@ -18,7 +18,7 @@ class Engine < Metadata
     end
     key
   end
-  
+
   # --- CLEAN DATA ---
   def remove_duplicates
     temp = []
@@ -27,7 +27,7 @@ class Engine < Metadata
     end
     @location = temp
   end
-  
+
   # --- SHOW DATA ---
   def display(argx)
     argx = @title if argx == 'title'
@@ -37,7 +37,7 @@ class Engine < Metadata
 
     argx.each { |line| p line }
   end
-  
+
   # --- EXPORT ---
   def export
     CSV.open('data.csv', 'wb', encoding: 'UTF-8', col_sep: ';') do |file|
