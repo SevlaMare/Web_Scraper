@@ -27,4 +27,14 @@ class Engine < Metadata
     end
     @location = temp
   end
+  
+  # --- SHOW DATA ---
+  def display(argx)
+    argx = @title if argx == 'title'
+    argx = @location if argx == 'location'
+    argx = @salary if argx == 'salary'
+    argx = @content if argx == 'content'
+
+    argx.each { |line| p line }
+  end
 end
