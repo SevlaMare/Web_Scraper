@@ -37,4 +37,14 @@ class Engine < Metadata
 
     argx.each { |line| p line }
   end
+  
+  # --- EXPORT ---
+  def export
+    CSV.open('data.csv', 'wb', encoding: 'UTF-8', col_sep: ';') do |file|
+      file << @title
+      file << @location
+      file << @salary
+      file << @content
+    end
+  end
 end
