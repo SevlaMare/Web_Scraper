@@ -82,8 +82,9 @@ or of which page you want to get the results, do the following steps:
 
 #### Output file
 After running `data.csv` will be generated<br>
-It contains 4 rows, with the position name, location, salary and description respectively
-And each column will be one job post.
+It contains 4 rows, with the position name, location, salary and description respectively.<br>
+Each column will be one job post.<br>
+It comes ready to be imported in any database or any spreadsheet program.<br>
 
 ### Contributing
 
