@@ -80,6 +80,11 @@ or of which page you want to get the results, do the following steps:
 * The 'ruby rails' you can change to any keyword that you want to search for open positions.
 * After the changes, save the file and run it on terminal.
 
+#### Output file
+After running `data.csv` will be generated<br>
+It contains 4 rows, with the position name, location, salary and description respectively
+And each column will be one job post.
+
 ### Contributing
 
 Contributions, issues and feature requests are welcome!
