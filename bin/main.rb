@@ -17,15 +17,11 @@ def show_all(page = 1, export = true, search = 'ruby')
   # --- CLEAN DATA ---
   scrap.remove_duplicates
 
-  # --- DISPLAY ---
-  scrap.display('title')
-  scrap.display('location')
-  scrap.display('salary')
-  scrap.display('content')
-
   # --- EXPORT CSV ---
   scrap.export if export
+
+  puts 'File exported.'
 end
 
 # page_number, export_to_csv, search term
-show_all(3, true, 'ruby rails')
+show_all(1, true, 'ruby rails')
