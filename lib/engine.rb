@@ -18,4 +18,13 @@ class Engine < Metadata
     end
     key
   end
+  
+  # --- CLEAN DATA ---
+  def remove_duplicates
+    temp = []
+    (0...@location.length).step(2).each do |index|
+      temp << @location[index]
+    end
+    @location = temp
+  end
 end
