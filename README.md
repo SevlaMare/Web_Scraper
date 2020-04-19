@@ -1,76 +1,90 @@
 # Web Scraper
-> Scan for Full Stack open positions
+> Scan for open positions of any kind and export data into a table.<br>
 
-![screenshot](./images/screenshot.png)
+![screenshot](screenshot.png)
 
-<br>Done with Nokogiri
+<br>The main purpose here is to deploy a working app<br>
+Having to learn a new librarie in a short amount of time (Less than 3 days).
 
 ## Content
 
 * [Requirements](#requirements)
 * [Built With](#built-with)
-* [Quick Start](#quick-start)
-* [Dependencies](#dependencies)
+* [Getting Start](#getting-start)
 * [Contributing](#contributing)
 * [Acknowledgments](#acknowledgments)
 * [Author](#author)
 * [License](#license)
 
-## Game rules.
-* Two players play
-* Each play draw X or O alternately on board
-* The game ends when someone get 3 marks in a row
-* The row can be vertical, horizontal or diagonal 
-
 ## Requirements
 
 <ul>
-  <h3>Features</h3>
-  <li>Get a valid user input</li>
-  <li>Display board after each move</li>
-  <li>End game if someone win</li>
-  <li>End game if board become full</li>
+  <li>Should use Nokogiri</li>
+  <li>Should use Oriented Object Programming</li>
+  <li>Should have unit tests</li>
+  <li>Follow good practices</li>
+  <li>Make it friendly to use and modify</li>
 </ul>
 
-### Built With
+## Built With
 
 - Ruby Language <br>
-- Nokogiri gem
-- Rubocop (Linter) with Stickler (CI Tool)<br>
+- Nokogiri <br>
 - RSpec (Unit testing) <br>
-- Git (with Gitflow), Github and VScode <br>
+- Rubocop (Linter) with Stickler (CI Tool) <br>
+- Git, Github and VScode <br>
 
-## Live Demo
+## Getting Start
 
-To play online, go to the page and hit (Run) button.
-[Run on Repl.it](https://repl.it/@ThiagoMiranda2/tictactoeruby)
+#### Install
+To use this program, you will need install:
+* Ruby Language - Version 2.5.5 or high - [Install guide](https://www.ruby-lang.org/en/documentation/installation/)
+* Nokogiri Gem - Version 1.10.9 or high - [Install guide](https://nokogiri.org/tutorials/installing_nokogiri.html)
 
-## Quick Start
-
-#### Get a local copy with:<br>
+if you are using Ubuntu, you can install both on terminal, just typing:
 ```js
-git clone git@github.com:SevlaMare/TicTacToe_Ruby.git
+sudo apt-get install ruby-full
 ```
-Or just hit (Download Zip) on green button (Clone or Download) on top of this page.
+and
+```js
+sudo apt-get install ruby-full
+```
 
-#### Run on terminal/prompt:
+#### Get a local copy
+Now you need a copy of this application, if you are using Git:
+```js
+git clone git@github.com:SevlaMare/Web_Scraper.git
+```
+Otherwise just hit (Download Zip) on green button (Clone or Download) at top of this page.
 
-If you are on windows:
-* Go inside the project folder
-* Right shift '+' right mouse click (Float menu)
-* Open prompt here (Option)
+
+#### Run (With default settings)
+To run, from the application folder, just type on terminal:
 ```js
 ruby bin/main.rb
 ```
-For linux:
-```js
-bin/main.rb
-```
 
-### Dependencies
+When run, by default, it will generate a CSV file with data 
+from one page, scrapped for 'Full Stack' open positions.
 
-Ruby 2.5.5
-Nokogiri
+#### Modify Parameters
+If you want to change which kind of position it will look for, 
+or of which page you want to get the results, do the following steps:
+
+* Open the directory `/bin` from application folder
+* Open the file `main.rb` with any text editor
+* At the last line, you have this:
+<br>`show_all(3, true, 'ruby rails')`
+* The number 3 is the page which you want to scrap, can by any available number.
+* You can change the `true` to `false` if you don't want the CSV file.
+* The 'ruby rails' you can change to any keyword that you want to search for open positions.
+* After the changes, save the file and run it on terminal.
+
+#### Output file
+After running `data.csv` will be generated<br>
+It contains 4 rows, with the position name, location, salary and description respectively.<br>
+Each column will be one job post.<br>
+It comes ready to be imported in any database or any spreadsheet program.<br>
 
 ### Contributing
 
