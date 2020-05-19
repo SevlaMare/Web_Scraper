@@ -47,7 +47,7 @@ sudo apt-get install ruby-full
 ```
 and
 ```js
-sudo apt-get install ruby-full
+gem install nokogiri
 ```
 
 #### Get a local copy
